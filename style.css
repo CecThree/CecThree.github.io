@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    background-color: white;
+    color: black;
+    font-family: "Rubik", sans-serif;
+}
+
+.headertext {
+    text-align: center;
+    font-size: 8rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h5 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+dir {
+    text-align: center;
+}
+
+.aliastext {
+    font-smooth: always;
+}
+
+.navbarColor {
+    background: black;
+}
+
+.navbarText {
+    color: azure;
+    font-size: 1.25rem;
+}
+
+.navbar .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: rgb(204, 26, 136);
+    transform: translate(0, -3px);
+}
+
+.nameText {
+    background: linear-gradient(45deg, rgb(204, 26, 136) 0%, rgb(122, 6, 116) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+}
+
+.carouselText {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.blueText {
+    color: rgb(4, 246, 255)
+}
+
+.blackText {
+    color: black;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nearestNeighbor {
+    image-rendering: pixelated;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    pointer-events: none;
+}
+
+.rectFrame {
+    background: linear-gradient(45deg, rgb(204, 26, 136) 0%, rgb(122, 6, 116) 100%);
+    border-radius: 16px;
+}
+
+.row {
+    display: flex
+}
+
+.linksTable {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: red;
+}
+
+.linkElement {
+    width: 150px;
+    padding-top: 50px;
+    background-color: blue;
+}
+
+.tableText {
+    font-size: 1.25rem;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.333333333333%;
+    padding: 10px;
+}
+
+.column a>:hover {
+    transform: translate(0, -3px);
+}
+
+.fruitloopimg {
+    cursor: pointer; 
+}
+
+.fruitloop {
+    width: 200px;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+.fruitloopmeow {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    opacity: 0%;
+}
+
+.fruitloop:hover .fruitloopimg {
+    animation-name: fl;
+    animation-duration: .5s;
+}
+@keyframes fl {
+    0%  {transform: translate(0, 0);}
+    50% {transform: translate(0, -10px);}
+    100%  {transform: translate(0, 0);}
+}
+
+  .fruitloop:hover .fruitloopmeow {
+    animation-name: flmeow;
+    animation-duration: 1s;
+}
+@keyframes flmeow {
+    0%  {transform: translate(0, 0); opacity: 100%;}
+    25%  {opacity: 100%;}
+    100%  {transform: translate(-100px, -100px); opacity: 0%;}
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* container */
+.right-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* columns */
+.right-sidebar>* {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+    .right-sidebar>*:nth-child(1) {
+        width: calc(100% / 3 * 2);
+    }
+
+    .right-sidebar>*:nth-child(2) {
+        width: calc(100% / 3);
+    }
+
+    .linksTable {
+        width: 50%;
+        table-layout: fixed;
+    }
+
+    .linkElement {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .tableText {
+        font-size: 1rem;
+    }
+}
+
+.mainbox {
+    width: 100%;
+    height: 100%;
+}
+
+.galleryText {
+    font-size: 6.5vw;
+}
+
+
+@media (min-width:1200px) {
+    .mainbox {
+        width: 1200px;
+    }
+
+    .galleryText {
+        font-size: 4.8rem;
+    }
+
+    .tableText {
+        font-size: 2rem;
+    }
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -82px;
+    visibility: hidden;
+    scroll-behavior: smooth;
+}
+
+#gallery {
+    line-height: 0;
+    -webkit-column-count: 5;
+    /* split it into 5 columns */
+    -webkit-column-gap: 5px;
+    /* give it a 5px gap between columns */
+    -moz-column-count: 5;
+    -moz-column-gap: 5px;
+    column-count: 5;
+    column-gap: 5px;
+}
+
+#gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 5px;
+    /* to match column gap */
+}
+
+@media (max-width: 1200px) {
+    #gallery {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media (max-width: 1000px) {
+    #gallery {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media (max-width: 800px) {
+    #gallery {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    #gallery {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+table {
+    width: 100%;
+}
